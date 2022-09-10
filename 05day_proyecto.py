@@ -49,7 +49,7 @@ Por favor eliga una:
 2 - Pizza Mediterránea
 3 - Pizza 4 Quesos\n
 """))
-while eleccion<0 or eleccion>4:
+elif eleccion<0 or eleccion>4:
     eleccion=int(input("""
 Por favor eliga una (marque del 1 al 3):
 1 - Pizza Margarita
@@ -61,10 +61,10 @@ if eleccion == 1:
     print(f"Ha elegido Pizza Margarita\n")
     saldo_actual=saldo_usuario-pizza_margarita
     print(f"Su saldo actual es de: {saldo_actual}€")
-    while saldo_actual<0:
-        print(f"Su saldo: {saldo_actual}")
-        print("No tiene suficiente dinero por favor vuelva a elegir")
-        eleccion=int(input("""
+elif saldo_actual<0:
+    print(f"Su saldo: {saldo_actual}")
+    print("No tiene suficiente dinero por favor vuelva a elegir")
+    eleccion=int(input("""
 Por favor eliga una (marque del 1 al 3):
 1 - Pizza Margarita
 2 - Pizza Mediterránea
@@ -75,10 +75,10 @@ if eleccion == 2:
     print(f"Ha elegido Pizza Mediterránea\n")
     saldo_actual=saldo_usuario-pizza_mediterranea
     print(f"Su saldo actual es de: {saldo_actual}€")
-    while saldo_actual<0:
-        print(f"Su saldo: {saldo_actual}")
-        print("No tiene suficiente dinero por favor vuelva a elegir")
-        eleccion=int(input("""
+elif saldo_actual<0:
+print(f"Su saldo: {saldo_actual}")
+print("No tiene suficiente dinero por favor vuelva a elegir")
+eleccion=int(input("""
 Por favor eliga una (marque del 1 al 3):
 1 - Pizza Margarita
 2 - Pizza Mediterránea
